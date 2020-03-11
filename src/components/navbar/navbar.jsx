@@ -1,7 +1,8 @@
 import React from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
-const Header = () => {
+const Header = (props) => {
+  console.log(props)
   return (
     <Navbar bg="light" expand="lg">
       <Container>
@@ -26,7 +27,7 @@ const Header = () => {
             <Nav.Link>
               <Link to="/e">Careers</Link>
             </Nav.Link>
-            <Nav.Link>
+            <Nav.Link onClick={props.click}>
                  <i class="fa fa-user-circle-o" aria-hidden="true"></i>
             </Nav.Link> 
           </Nav>
