@@ -12,7 +12,7 @@ function App() {
     <div className="App">
       <NavBar />
       <Route path={"/"} exact component={Landingpage}  />
-      {data.paths.map((path, index)=>{
+      {data.paths.map(path=>{
         return  <Route path={"/"+path}component={Content}  />
       })}
     </div>
