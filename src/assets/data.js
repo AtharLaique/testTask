@@ -27,11 +27,8 @@
                   'https://www.ucas.com/sites/default/files/styles/landing_tile/public/landing/employment_0.jpg?itok=CxTMfV7Q'
         ],
         bottomLeft:['https://www.ucas.com/sites/default/files/styles/landing_tile/public/landing/thinkingaboutuni.jpg?itok=PeTxZen4',
-                     '(https://www.ucas.com/sites/default/files/styles/landing_tile/public/landing/apprenticeships_2.jpg?itok=ghjNLZf-',
+                     'https://www.ucas.com/sites/default/files/styles/landing_tile/public/landing/apprenticeships_2.jpg?itok=ghjNLZf-',
                      'https://www.ucas.com/sites/default/files/styles/landing_tile/public/landing/teacher-training_1.jpg?itok=6JxetTaJ',
-                     null,
-                     null
-
                     ]
       }
   export default data;
