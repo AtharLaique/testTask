@@ -3,6 +3,8 @@ import Login from "./login/login";
 import Signup from "./signup/signup";
 import Footer from "../footer/footer";
 import {Container , Col} from 'react-bootstrap';
+import url from "../../assets/url";
+import axios from 'axios';
 class Auth extends Component {
   state = {
     isLogin: true,
@@ -22,11 +24,20 @@ class Auth extends Component {
   onInputChange=(event)=>{
   this.setState({[event.target.name]:event.target.value})
   }
-  onFormSubmit=()=>{
+  onFormSubmit=async ()=>{
     //Login
     if(this.state.isLogin)
     {
-      console.log("login")
+       axios.post(url.login,
+        { email:'atharlaique@yahoo.com',
+        password:'1234567',
+        returnSecureToken:true})
+        .then(res=>{
+          console.log(res)
+        })
+        .catch(err=>{
+          console.log("Error")
+        })
     }//signup
     else{
       console.log(this.state)
