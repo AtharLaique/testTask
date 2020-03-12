@@ -2,7 +2,6 @@ import React from "react";
 import { Form, Button } from "react-bootstrap";
 
 const Login = (props) => {
-    console.log(props)
   return (
     <div>
       <h1> Login</h1>
@@ -26,7 +25,7 @@ const Login = (props) => {
            onChange={props.change}
             />
         </Form.Group>
-        <Button variant="primary" type="button">
+        <Button variant="primary" type="button" onClick={props.submit}>
           Go !
         </Button>
       </Form>
