@@ -1,6 +1,6 @@
 import { createStore , applyMiddleware , compose} from 'redux';
 import thunk from 'redux-thunk';
-import RootReducer from './Redux/index';
+import RootReducer from './Redducer/index';
 
 const middleware=[thunk];
 const initailState={};
