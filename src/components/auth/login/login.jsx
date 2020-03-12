@@ -1,10 +1,24 @@
-import React from 'react';
+import React from "react";
+import { Form, Button } from "react-bootstrap";
+const Login = () => {
+  return (
+    <div>
+      <h1> Login</h1>
+      <Form>
+        <Form.Group controlId="formBasicEmail">
+          <Form.Label>Email address</Form.Label>
+          <Form.Control type="email" placeholder="Enter email" />
+        </Form.Group>
 
-const Login =()=>{
-    return(
-        <div>
-            <h1> Login</h1>
-        </div>
-    )
-}
-export default  Login;
+        <Form.Group controlId="formBasicPassword">
+          <Form.Label>Password</Form.Label>
+          <Form.Control type="password" placeholder="Password" />
+        </Form.Group>
+        <Button variant="primary" type="button">
+          Go !
+        </Button>
+      </Form>
+    </div>
+  );
+};
+export default Login;

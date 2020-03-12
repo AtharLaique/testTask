@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Login from "./login/login";
 import Signup from "./signup/signup";
 import Footer from "../footer/footer";
-
+import {Container} from 'react-bootstrap';
 class Auth extends Component {
   state = {
     isLogin: true
@@ -17,9 +17,11 @@ class Auth extends Component {
   render() {
     return (
       <div>
-        {this.state.isLogin ? <Signup /> : <Login />}
-        <a onClick={this.Togle}>{this.state.isLogin ? "Login" : "Signup"}</a>
-        <Footer id="0" />
+      <Container>
+        {!this.state.isLogin ? <Signup /> : <Login />}
+        <a onClick={this.Togle}>{this.state.isLogin ? "Signup" : "Login"}</a>
+      </Container>
+      <Footer id="0" />
       </div>
     );
   }
