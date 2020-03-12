@@ -40,8 +40,9 @@ const Content = props => {
           </Col>
         </Row>
         <Row>
-          <Col>1 of 3</Col>
-          <Col>2 of 3</Col>
+          <Col lg='3'>1 of 3</Col>
+          <Col lg='3'>2 of 3</Col>
+          <Col lg='6'>1 of 3</Col>
         </Row>
         {data.bottomLeft[index] ? (
           <Row>

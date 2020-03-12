@@ -31,7 +31,7 @@ const Header = props => {
             })}
             <Nav.Link onClick={props.click}>Create profile</Nav.Link>
             <Nav.Link>
-              <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+              <Link to="/login"> <i class="fa fa-user-circle-o" aria-hidden="true"></i></Link>
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>

@@ -4,6 +4,7 @@ import { Route } from "react-router-dom";
 import Landingpage from "../components/landing/landing";
 import Content from "../components/content/content"
 import NavBar from "../container/navbar";
+import Auth from "../components/auth/auth";
 import data from "../assets/data";
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       {data.paths.map(path=>{
         return  <Route path={"/"+path}component={Content}  />
       })}
+      <Route path="/login" component={Auth}/>
     </div>
   );
 }
