@@ -7,7 +7,6 @@ import NavBar from "../container/navbar";
 import Auth from "../components/auth/auth";
 import data from "../assets/data";
 function App() {
-  console.log(data.paths)
   return (
     <div className="App">
       <NavBar />

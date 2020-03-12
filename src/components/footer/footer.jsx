@@ -9,7 +9,6 @@ import {FacebookFilled ,
 import data from '../../assets/data';
 
 const Footer = (props) => {
-    console.log(data.footer[props.id].image[0])
   return <div> 
       <div style={{backgroundColor:'#f2f2f2',padding:'3%'}}> 
       <Container >
