@@ -1,6 +1,6 @@
-// import {combineReducers} from 'redux';
-// import auth from './auth';
+import {combineReducers} from 'redux';
 
-// export default combineReducers({
-//    user:auth
-// });
+
+export default combineReducers({
+  
+});
