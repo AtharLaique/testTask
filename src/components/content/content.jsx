@@ -1,10 +1,9 @@
 import React from "react";
 import data from "../../assets/data";
 import { Container, Row, Col, Card } from "react-bootstrap";
-
+import Footer from '../footer/footer';
 const Content = props => {
   const index = props.location.state.id;
-  console.log(data.images[index]);
   return (
     <div style={{ backgroundImage: `url(${data.images[index]})`, height: 400 }}>
       <Container>
@@ -63,6 +62,7 @@ const Content = props => {
           </Row>
         ) : null}
       </Container>
+      <Footer id={index}/>
     </div>
   );
 };

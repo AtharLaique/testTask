@@ -29,7 +29,49 @@
         bottomLeft:['https://www.ucas.com/sites/default/files/styles/landing_tile/public/landing/thinkingaboutuni.jpg?itok=PeTxZen4',
                      'https://www.ucas.com/sites/default/files/styles/landing_tile/public/landing/apprenticeships_2.jpg?itok=ghjNLZf-',
                      'https://www.ucas.com/sites/default/files/styles/landing_tile/public/landing/teacher-training_1.jpg?itok=6JxetTaJ',
-                    ]
+                    ],
+        footer:[
+               {
+                       title:['Study at a Top 10 Business School','Apprenticeships – the facts','How to find a job'],
+                       subTitle:['Sponsored by Southampton Business School','UCAS article','UCAS article'],
+                       image:['https://www.ucas.com/sites/default/files/styles/square_thumbnail/public/article-images/uos-logo-blue-100px_0.jpg?itok=UmWM9jAs',
+                               'https://www.ucas.com/sites/default/files/styles/square_thumbnail/public/apprenticeship-launch-image.jpg?itok=vta54RED',
+                               'https://www.ucas.com/sites/default/files/styles/square_thumbnail/public/ucas-job-board.jpg?itok=84NqiZm2'
+                             ]
+               },
+               {
+                title:['Apply To Now Teach Network ','Choose to do university','Apprenticeship'],
+                subTitle:['Sponsored by Now Teach','Sponsored by University of the West of England','UCAS article'],
+                image:['https://www.ucas.com/sites/default/files/styles/square_thumbnail/public/article-images/100x100_v1.png?itok=kxEsG6-3',
+                        'https://www.ucas.com/sites/default/files/styles/square_thumbnail/public/article-images/logo_-_100px_x_100px2.gif?itok=iSVvFG09',
+                        'https://www.ucas.com/sites/default/files/styles/square_thumbnail/public/apprenticeship-launch-image.jpg?itok=vta54RED'
+                      ]
+               },
+               {
+                title:['Five reasons to sign up','How to find a job','Study at a Top 10 Business School'],
+                subTitle:['UCAS article','UCAS article','Sponsored by Southampton Business School'],
+                image:['https://www.ucas.com/sites/default/files/styles/square_thumbnail/public/apprenticeship-launch-image.jpg?itok=vta54RED',
+                        'https://www.ucas.com/sites/default/files/styles/square_thumbnail/public/ucas-job-board.jpg?itok=84NqiZm2',
+                        'https://www.ucas.com/sites/default/files/styles/square_thumbnail/public/article-images/uos-logo-blue-100px_0.jpg?itok=UmWM9jAs'
+                      ]
+               },
+               {
+                title:['Choose to do university','Get ready to study with 6 free uni books','Tips on choosing the halls for you'],
+                subTitle:['Sponsored by University of the West of England','Sponsored by Perlego','Sponsored by Bangor University'],
+                image:['https://www.ucas.com/sites/default/files/styles/square_thumbnail/public/article-images/logo_-_100px_x_100px2.gif?itok=iSVvFG09',
+                        'https://www.ucas.com/sites/default/files/styles/square_thumbnail/public/article-images/ucas-sponsoredcontent_6.png?itok=6uwhd_bY',
+                        'https://www.ucas.com/sites/default/files/styles/square_thumbnail/public/article-images/ucas_sponsored_content_100x100.jpg?itok=X9AepQ3D'
+                      ]
+               },
+               {
+                title:['The best university in the UK','Start this September. Apply now!','Tips on choosing the halls for you'],
+                subTitle:['Sponsored by Bangor University','Sponsored by University of Plymouth','Sponsored by Bangor University'],
+                image:['https://www.ucas.com/sites/default/files/styles/square_thumbnail/public/article-images/ucas_sponsored_content_100x100_0.jpg?itok=J0iW5XoM',
+                        'https://www.ucas.com/sites/default/files/styles/square_thumbnail/public/article-images/plymouth-uni-logo_0.jpg?itok=0huOEn_w',
+                        'https://www.ucas.com/sites/default/files/styles/square_thumbnail/public/article-images/ucas_sponsored_content_100x100_0.jpg?itok=J0iW5XoM'
+                      ]
+               }
+        ]
       }
   export default data;
   
