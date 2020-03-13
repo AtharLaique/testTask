@@ -5,7 +5,8 @@ import Footer from "../footer/footer";
 import {Container , Col} from 'react-bootstrap';
 import url from "../../assets/url";
 import axios from 'axios';
-import { connect } from 'react-redux';
+import { connect } from 'react-redux'; 
+import { LoginHandling } from '../../Redux/Actions/AuthAction'; 
 class Auth extends Component {
   state = {
     isLogin: true,
@@ -26,10 +27,11 @@ class Auth extends Component {
   this.setState({[event.target.name]:event.target.value})
   }
   onFormSubmit=async ()=>{
+    
     //Login
     if(this.state.isLogin)
     {
-      console.log('Login is called')
+      this.props.LoginHandling(true ,this.props.history)
       
     }//signup
     else{
@@ -37,8 +39,7 @@ class Auth extends Component {
     }
   }
   render() {
-    console.log( this.props.user)
-    return (
+     return (
       <div>
       <Container>
         <Col lg='5'>
@@ -56,7 +57,6 @@ class Auth extends Component {
   }
 }
 const mapStateToProps=(state)=>({
-  user:state.auth
-})  
-
-export default connect(mapStateToProps,null) (Auth);
+  user:state.Auth
+})      
+export default connect(mapStateToProps,{LoginHandling})(Auth);
