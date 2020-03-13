@@ -33,7 +33,7 @@ const Header = props => {
             })}
             {isLogin? 
             <React.Fragment>
-            <Nav.Link onClick={props.click}>Create profile</Nav.Link>
+            <Nav.Link> <Link to="/create-profile">Create profile</Link></Nav.Link>
            <Nav.Link onClick={props.onLogout}>Logout</Nav.Link>
            </React.Fragment>
             :<Nav.Link>

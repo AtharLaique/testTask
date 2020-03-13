@@ -7,6 +7,7 @@ import NavBar from "../container/navbar";
 import Auth from "../components/auth/auth";
 import data from "../assets/data";
 import PrivateRoute from "../routes/guard/privateRoute";
+import CreateProfile from "../components/Profile/createProfile";
 function App() {
   return (
     <div className="App">
@@ -16,6 +17,7 @@ function App() {
         return  <Route path={"/"+path}component={Content}  />
       })}
       <PrivateRoute path="/login" component={Auth}/>
+      <Route path={"/create-profile"} exact component={ CreateProfile}  />
     </div>
   );
 }
