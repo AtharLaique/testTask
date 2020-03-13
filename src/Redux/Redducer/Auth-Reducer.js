@@ -1,4 +1,10 @@
-const initialState = { isLogin: false };
+
+let initialState = {email:null,idToken:null, isLogin: false };
+//If user already Logged in
+let user=JSON.parse(localStorage.getItem('user'))
+if(user){
+   initialState=user;
+}
 export default function(state=initialState,action){
       switch (action.type) {
             case 'AUTH':
