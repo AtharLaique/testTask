@@ -38,6 +38,7 @@ class Auth extends Component {
       console.log(this.state)
     }
   }
+ 
   render() {
      return (
       <div>
@@ -45,7 +46,7 @@ class Auth extends Component {
         <Col lg='5'>
         {!this.state.isLogin ? 
         <Signup change={this.onInputChange} submit={this.onFormSubmit}/> 
-        : <Login change={this.onInputChange} submit={this.onFormSubmit}/>}
+        : <Login change={this.onInputChange} submit={this.onFormSubmit} />}
         </Col>
         <br/>
         <a onClick={this.Togle}>{this.state.isLogin ? 

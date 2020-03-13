@@ -11,7 +11,17 @@ export default function(state=initialState,action){
             console.log('AUTH CASE')
               return {
                 ...state,
-                isLogin: action.payload 
+                isLogin: action.payload.isLogin,
+                email:action.payload.email,
+                idToken:action.payload.idToken
+              };
+        case 'LOGOUT':
+            console.log('LOGOUT')
+              return {
+                ...state,
+                isLogin: false,
+                email:null,
+                idToken:null
               };
             default:
               return state;

@@ -24,8 +24,10 @@ export const LoginHandling = (data, history) => dispatch => {
         idToken: res.data.idToken,
         isLogin: true
       }))
+      history.push("/")
     })
     .catch(err => {
       console.log("Its Error");
     });
 };
+

@@ -6,6 +6,7 @@ import Content from "../components/content/content"
 import NavBar from "../container/navbar";
 import Auth from "../components/auth/auth";
 import data from "../assets/data";
+import PrivateRoute from "../routes/guard/privateRoute";
 function App() {
   return (
     <div className="App">
@@ -14,7 +15,7 @@ function App() {
       {data.paths.map(path=>{
         return  <Route path={"/"+path}component={Content}  />
       })}
-      <Route path="/login" component={Auth}/>
+      <PrivateRoute path="/login" component={Auth}/>
     </div>
   );
 }
