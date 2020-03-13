@@ -5,6 +5,7 @@ import Footer from "../footer/footer";
 import {Container , Col} from 'react-bootstrap';
 import url from "../../assets/url";
 import axios from 'axios';
+import { connect } from 'react-redux';
 class Auth extends Component {
   state = {
     isLogin: true,
@@ -28,22 +29,15 @@ class Auth extends Component {
     //Login
     if(this.state.isLogin)
     {
-       axios.post(url.login,
-        { email:'atharlaique@yahoo.com',
-        password:'1234567',
-        returnSecureToken:true})
-        .then(res=>{
-          console.log(res)
-        })
-        .catch(err=>{
-          console.log("Error")
-        })
+      console.log('Login is called')
+      
     }//signup
     else{
       console.log(this.state)
     }
   }
   render() {
+    console.log( this.props.user)
     return (
       <div>
       <Container>
@@ -61,4 +55,8 @@ class Auth extends Component {
     );
   }
 }
-export default Auth;
+const mapStateToProps=(state)=>({
+  user:state.auth
+})  
+
+export default connect(mapStateToProps,null) (Auth);
