@@ -1,31 +1,40 @@
 import React from "react";
 import { Form, Button } from "react-bootstrap";
-
+import { useForm } from "react-hook-form";
 const Login = (props) => {
+  const { handleSubmit, register, errors } = useForm();
+
   return (
     <div>
       <h1> Login</h1>
-      <Form>
-        <Form.Group controlId="formBasicEmail">
+      <Form onSubmit={handleSubmit(props.submit)}>
+      <Form.Group controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
           <Form.Control 
           name="email"
-          type="email" 
-          placeholder="Enter email" 
-          onChange={props.change}
+          ref={register({
+            required: 'Required',
+            pattern: {
+              value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i
+            }
+          })}
           />
         </Form.Group>
+        {errors.email && "invalid email address"}
 
         <Form.Group controlId="formBasicPassword">
           <Form.Label>Password</Form.Label>
           <Form.Control 
            type="password"
            name="password"
-           placeholder="Password"
-           onChange={props.change}
+           ref={register({
+            required: "Required",
+            minLength:7
+          })}
             />
+               {errors.password && "password must be 7 chracter long"}
         </Form.Group>
-        <Button variant="primary" type="button" onClick={props.submit}>
+        <Button variant="primary" type="submit" >
           Go !
         </Button>
       </Form>

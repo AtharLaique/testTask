@@ -1,13 +1,8 @@
 import axios from "axios";
 import url from "../../assets/url";
 export const LoginHandling = (data, history) => dispatch => {
-  console.log(data);
   axios
-    .post(url.login, {
-      email: "atharlaique@yahoo.com",
-      password: "1234567",
-      returnSecureToken: true
-    })
+    .post(url.login,data)
     .then(res => {
       console.log(res.data.email);
       dispatch({
@@ -24,10 +19,10 @@ export const LoginHandling = (data, history) => dispatch => {
         idToken: res.data.idToken,
         isLogin: true
       }))
-      history.push("/")
+      history.push("/create-profile")
     })
     .catch(err => {
-      console.log("Its Error");
+      alert('Unauthorized Access')
     });
 };
 

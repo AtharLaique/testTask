@@ -17,7 +17,7 @@ function App() {
         return  <Route path={"/"+path}component={Content}  />
       })}
       <PrivateRoute path="/login" component={Auth}/>
-      <Route path={"/create-profile"} exact component={ CreateProfile}  />
+      <PrivateRoute path={"/create-profile"} exact component={ CreateProfile}  />
     </div>
   );
 }

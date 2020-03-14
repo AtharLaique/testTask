@@ -26,16 +26,24 @@ class Auth extends Component {
   onInputChange=(event)=>{
   this.setState({[event.target.name]:event.target.value})
   }
-  onFormSubmit=async ()=>{
-    
+  onFormSubmit=(data)=>{
+   
+    data.returnSecureToken= true
     //Login
     if(this.state.isLogin)
     {
-      this.props.LoginHandling(true ,this.props.history)
+     this.props.LoginHandling(data ,this.props.history)
       
     }//signup
     else{
-      console.log(this.state)
+      axios.post(url.signup,data)
+      .then(res=>{
+        alert('your account has been created')
+        this.setState({isLogin:true})
+      })
+      .catch(err=>{
+        alert('This email is already exist')
+      })
     }
   }
  

@@ -7,7 +7,7 @@ const Profile = props => {
     const { handleSubmit, register, errors } = useForm();
   return (
     <div>
-      <h1> Personal Info</h1>
+      <h3> Personal Info</h3>
       <Form onSubmit={handleSubmit(props.submit)}>
         <Form.Group controlId="formBasicEmail">
           <Form.Label>Enter Your Name</Form.Label>
@@ -25,39 +25,52 @@ const Profile = props => {
           name="phone"
             ref={register({
               required: "Required",
-              minLength:11,
-              maxLength:11
+              min:11,
+              max:11
             })}
           />
         </Form.Group>
-
+        {errors.phone && "Your input required exactly 11"}
         <Form.Group controlId="formBasicEmail">
-          <Form.Label>Last Name</Form.Label>
+          <Form.Label>Address</Form.Label>
           <Form.Control
-            name="lastName"
-            type="name"
-            placeholder="Enter email"
-            onChange={props.change}
+            name='address'
+            as="textarea" rows="3"
+            ref={register({
+                required: "Required"
+              })}
+          />
+        </Form.Group>
+        <h3> Acadmic History</h3>
+        <Form.Group controlId="formBasicPassword">
+          <Form.Label>Qualification</Form.Label>
+          <Form.Control
+            name='qualification'
+            type="text"
+            ref={register({
+                required: "Required"
+              })}
           />
         </Form.Group>
 
         <Form.Group controlId="formBasicPassword">
-          <Form.Label>Password</Form.Label>
+          <Form.Label>Grade</Form.Label>
           <Form.Control
-            type="password"
-            name="password"
-            placeholder="Password"
-            onChange={props.change}
+             name='grade'
+             type="text"
+             ref={register({
+                 required: "Required"
+               })}
           />
         </Form.Group>
-
+        <h3> University Prefrence</h3>
         <Form.Group controlId="formBasicPassword">
-          <Form.Label>Confirm Password</Form.Label>
           <Form.Control
-            type="password"
-            name="confirmPassword"
-            placeholder="Password"
-            onChange={props.change}
+            name='prefrence'
+            as="textarea" rows="3"
+            ref={register({
+                required: "Required"
+              })}
           />
         </Form.Group>
         <Button variant="primary" type="submit">

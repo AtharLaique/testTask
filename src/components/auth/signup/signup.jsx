@@ -1,62 +1,40 @@
 import React from 'react';
 import { Form, Button } from "react-bootstrap";
+import { useForm } from "react-hook-form";
 
 const Signup =(props)=>{
+  const { handleSubmit, register, errors } = useForm();
     return(
         <div>
              <h1> Signup</h1>
-             <Form>
+             <Form onSubmit={handleSubmit(props.submit)}>
         <Form.Group controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
           <Form.Control 
           name="email"
-          type="email" 
-          placeholder="Enter email" 
-          onChange={props.change}
+          ref={register({
+            required: 'Required',
+            pattern: {
+              value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i
+            }
+          })}
           />
         </Form.Group>
-
-        <Form.Group controlId="formBasicEmail">
-          <Form.Label>First Name</Form.Label>
-          <Form.Control 
-          name="firstName"
-          type="name" 
-          placeholder="Enter email" 
-          onChange={props.change}
-          />
-        </Form.Group>
-
-        <Form.Group controlId="formBasicEmail">
-          <Form.Label>Last Name</Form.Label>
-          <Form.Control 
-          name="lastName"
-          type="name" 
-          placeholder="Enter email" 
-          onChange={props.change}
-          />
-        </Form.Group>
-
+        {errors.email && "invalid email address"}
 
         <Form.Group controlId="formBasicPassword">
           <Form.Label>Password</Form.Label>
           <Form.Control 
            type="password"
            name="password"
-           placeholder="Password"
-           onChange={props.change}
+           ref={register({
+            required: "Required",
+            minLength:8
+          })}
             />
+               {errors.password && "password must be 8 chracter long"}
         </Form.Group>
-
-        <Form.Group controlId="formBasicPassword">
-          <Form.Label>Confirm Password</Form.Label>
-          <Form.Control 
-           type="password"
-           name="confirmPassword"
-           placeholder="Password"
-           onChange={props.change}
-            />
-        </Form.Group>
-        <Button variant="primary" type="button" onClick={props.submit}>
+        <Button variant="primary" type="submit" >
           Go !
         </Button>
       </Form>
